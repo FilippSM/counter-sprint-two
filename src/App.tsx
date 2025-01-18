@@ -1,51 +1,5 @@
 import { useEffect, useState } from 'react';
 import { Counter } from './sections/counter/Counter';
-import { SetCounter } from './sections/setCounter/SetCounter';
-
-function App() {
-  const maxStartValue = 5;
-  const minStartValue = 0;
-
-  const [maxValue, setMaxValue] = useState(maxStartValue);
-  const [minValue, setMinValue] = useState(minStartValue);
-  const [count, setCount] = useState(minValue);
-
-
-
-
-  
-  const getNumbers = (maxValue: number, minValue: number) => {
-    setMaxValue(maxValue)
-    setMinValue(minValue)
-    setCount(minValue);
-  }
-
-
-  const [message, setMessage] = useState<string | number>(minValue); 
-  return (
-    <div style={{ display: 'flex' }}>
-
-      <Counter 
-      maxValue={maxValue} 
-      minValue={minValue}  
-      count={count} 
-      setCount={setCount} 
-      message={message}
-      getNumbers={getNumbers}
-      setMessage={setMessage}
-      />
-      
-
-
-    </div>
-  );
-}
-
-export default App;
-
-
-/* import { useEffect, useState } from 'react';
-import { Counter } from './sections/counter/Counter';
 
 
 function App() {
@@ -92,4 +46,4 @@ function App() {
   );
 }
 
-export default App; */
+export default App;
