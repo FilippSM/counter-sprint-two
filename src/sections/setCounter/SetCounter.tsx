@@ -16,7 +16,11 @@ export const SetCounter = (props: SetCounterType) => {
    /*  const [countMax, setCountMax] = useState<number>(maxValue);
     const [countMin, setCountMin] = useState<number>(minValue); */
 
-    const [countMax, setCountMax] = useState<number>(() => {
+    const [countMax, setCountMax] = useState<number>(maxValueStart);
+
+    const [countMin, setCountMin] = useState<number>(minValueStart);
+
+  /*   const [countMax, setCountMax] = useState<number>(() => {
         const valueAsString = localStorage.getItem('maxValue');
         return valueAsString ? JSON.parse(valueAsString) : maxValueStart;
     });
@@ -32,7 +36,7 @@ export const SetCounter = (props: SetCounterType) => {
 
     useEffect(() => {
         localStorage.setItem('minValue', JSON.stringify(countMin))
-    }, [countMin])
+    }, [countMin]) */
 
     // Обновляем сообщение при изменении значений
     const handleMaxChange = (value: number) => {
