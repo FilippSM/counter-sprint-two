@@ -1,6 +1,5 @@
-import { useEffect, useState } from 'react';
-import { Counter } from './sections/counter/Counter';
-
+import { useEffect, useState } from "react";
+import { Counter } from "../sections/counter/Counter";
 
 function App() {
   const maxStartValue = 5;
@@ -8,7 +7,7 @@ function App() {
 
   const [maxValue, setMaxValue] = useState<number>(maxStartValue);
   const [minValue, setMinValue] = useState<number>(minStartValue);
- /*  const [maxValue, setMaxValue] = useState<number>(() => {
+  /*  const [maxValue, setMaxValue] = useState<number>(() => {
     const savedMaxValue = localStorage.getItem('maxValue');
     return savedMaxValue !== null ? JSON.parse(savedMaxValue) : maxStartValue;
   });
@@ -19,8 +18,8 @@ function App() {
   }); */
 
   const [count, setCount] = useState(minValue);
-  
-/*   useEffect(() => {
+
+  /*   useEffect(() => {
     localStorage.setItem('maxValue', JSON.stringify(maxValue));
     localStorage.setItem('minValue', JSON.stringify(minValue));
   }, [maxValue, minValue]); */
@@ -29,17 +28,16 @@ function App() {
     setMaxValue(maxValue);
     setMinValue(minValue);
     setCount(minValue);
-  }
+  };
 
-  const [message, setMessage] = useState<string | number>(minValue); 
+  const [message, setMessage] = useState<string | number>(minValue);
   return (
-    <div style={{ display: 'flex' }}>
-
-      <Counter 
-        maxValue={maxValue} 
-        minValue={minValue}  
-        count={count} 
-        setCount={setCount} 
+    <div style={{ display: "flex" }}>
+      <Counter
+        maxValue={maxValue}
+        minValue={minValue}
+        count={count}
+        setCount={setCount}
         message={message}
         getNumbers={getNumbers}
         setMessage={setMessage}
