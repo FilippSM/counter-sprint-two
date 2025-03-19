@@ -1,4 +1,5 @@
 import { combineReducers, configureStore } from "@reduxjs/toolkit";
+import { setCounterReducer } from "../model/setCounter-reducer";
 
 // объединение reducer'ов с помощью combineReducers
 const rootReducer = combineReducers({
@@ -6,6 +7,7 @@ const rootReducer = combineReducers({
   setCounter: setCounterReducer,
   values: valuesReducer,
   count: countReducer, */
+  setCounter: setCounterReducer,
 });
 
 // создание store

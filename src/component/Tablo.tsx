@@ -8,7 +8,7 @@ type TabloPropsType = {
 
 
 export const Tablo = (props: TabloPropsType) => {
-    console.log(typeof(props.message))
+   /*  console.log(typeof(props.message)) */
 
     return (
         <>
