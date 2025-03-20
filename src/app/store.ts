@@ -1,10 +1,11 @@
 import { combineReducers, configureStore } from "@reduxjs/toolkit";
 import { setCounterReducer } from "../model/setCounter-reducer";
+import { messageReducer } from "../model/message-reducer";
 
 // объединение reducer'ов с помощью combineReducers
 const rootReducer = combineReducers({
-/*   message: messageReducer,
-  setCounter: setCounterReducer,
+  message: messageReducer,
+ /*  setCounter: setCounterReducer,
   values: valuesReducer,
   count: countReducer, */
   setCounter: setCounterReducer,

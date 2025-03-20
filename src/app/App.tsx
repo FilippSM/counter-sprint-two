@@ -30,7 +30,7 @@ function App() {
     setCount(minValue);
   };
 
-  const [message, setMessage] = useState<string | number>(minValue);
+/*   const [message, setMessage] = useState<string | number>(minValue); */
   return (
     <div style={{ display: "flex" }}>
       <Counter
@@ -38,9 +38,7 @@ function App() {
         minValue={minValue}
         count={count}
         setCount={setCount}
-        message={message}
         getNumbers={getNumbers}
-        setMessage={setMessage}
       />
     </div>
   );
