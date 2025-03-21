@@ -70,6 +70,8 @@ export const SetCounter = (props: SetCounterType) => {
         setMessage(value < 0 || value >= countMax ? "Incorrect value" : "Enter values and press set");
     };
 
+
+    
     const setNumbers = () => {
         props.getNumbers(countMax, countMin);
         setMessage(countMin); // Устанавливаем сообщение на текущее значение countMin при нажатии
